@@ -10,6 +10,10 @@ model = pickle.load(open('model.pkl', 'rb'))
 def home():
 	return render_template('home.html')
 
+@app.route('/predict',methods=["POST"])
+def predict():
+       return render_template('height_weight.html')
+
 @app.route('/height_weight', methods=['GET', 'POST'])
 def predict_weight():
 
